@@ -4,8 +4,8 @@ RUN apt-get update
 RUN apt-get install inotify-tools -y
 RUN mkdir /urban
 RUN mkdir /urban/uploads
-COPY ./namenode/auto-upload.sh /urban
-WORKDIR /urban
+
+WORKDIR /psut_scripts
 RUN  nohup bash auto-upload.sh </dev/null >/urban/logs.txt 2>&1 &
 
 
